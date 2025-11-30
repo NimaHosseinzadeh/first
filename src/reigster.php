@@ -66,7 +66,7 @@ if(isset($_SESSION['message1'])){
                     </div>
                 <div class="flex gap-1 justify-center relative bottom-12">
                 <p class="text-sm text-[rgba(255,255,255,0.8)]">Don't have an account?</p>
-                <a class="text-sm text-[#06b6d4] hover:text-[rgba(255,255,255,0.8)]" href="index.php">Login</a>
+                <a class="text-sm text-[#06b6d4] hover:text-[rgba(255,255,255,0.8)]" href="index.html">Login</a>
             </div>
             </div>
 

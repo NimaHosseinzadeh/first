@@ -13,7 +13,7 @@
     <!-- Header -->
     <header class="flex justify-between items-center px-6 py-4 bg-[rgba(255,255,255,0.1)] backdrop-blur-md border-b border-[rgba(255,255,255,0.2)] shadow-md">
         <h1 class="text-white text-2xl font-bold">پنل مدیریت</h1>
-        <a href="index.php" class="text-white bg-[rgba(255,255,255,0.2)] hover:bg-[rgba(255,255,255,0.3)] px-4 py-2 rounded-lg transition-all">خروج</a>
+        <a href="index.html" class="text-white bg-[rgba(255,255,255,0.2)] hover:bg-[rgba(255,255,255,0.3)] px-4 py-2 rounded-lg transition-all">خروج</a>
     </header>
 
     <div class="flex flex-1 flex-col lg:flex-row">
