@@ -1,0 +1,77 @@
+<?php 
+session_start();
+if(isset($_SESSION['message1'])){
+    echo '<p class="text-green-500 text-center mt-4">'.$_SESSION['message1'].'</p>';
+    unset($_SESSION['message1']);
+}
+?>
+
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+  <title>ثبت نام</title>
+</head>
+<body class="flex justify-center items-center h-screen bg-[linear-gradient(135deg,rgb(102,126,234)_0%,rgb(118,75,162)_100%)] font-Inter">
+    <main>
+        <div class="bg-[rgba(255,255,255,0.1)] w-[420px] h-[700px] rounded-3xl border border-[rgba(255,255,255,0.2)] shadow-[0_8px_32px_rgba(0,0,0,0.1)]">
+            <div class="flex justify-center items-center flex-col">
+                <h2 class="text-4xl text-white font-bold mt-10 font-Inter">Welcome Back</h2>
+                <p class="text-gray-100 mt-2 font-Inter">Sign in to your account</p>
+                <form class="w-full flex flex-col items-center" action="register.php" method="post">
+                    <input class=" mt-8 py-5 bg-[rgba(255,255,255,0.2)] w-10/12 h-11 rounded-xl border border-[rgba(255,255,255,0.2)] text-white placeholder:absolute placeholder:left-3 placeholder:top-3 font-Inte focus:outline-2 focus:outline-[#06b6d4] pl-3" type="text" placeholder="First Name" id="input_first_name" name="first-name">
+
+                    <input class="mt-8 py-5 bg-[rgba(255,255,255,0.2)] w-10/12 h-11 rounded-xl border border-[rgba(255,255,255,0.2)] text-white placeholder:absolute placeholder:left-3 placeholder:top-3 font-Inte focus:outline-2 focus:outline-[#06b6d4] pl-3" type="text" placeholder="Last Name" id="input_last_name" name="last-name">
+
+                    <input class="mt-8 py-5 bg-[rgba(255,255,255,0.2)] w-10/12 h-11 rounded-xl border border-[rgba(255,255,255,0.2)] text-white placeholder:absolute placeholder:left-3 placeholder:top-3 font-Inte focus:outline-2 focus:outline-[#06b6d4] pl-3" type="email" placeholder="Email Address" id="input_email" name="email">
+                
+
+                <div class="w-full flex justify-center items-center relative">
+                    <input class="mt-8 py-5 bg-[rgba(255,255,255,0.2)] w-10/12 h-11 rounded-xl border border-[rgba(255,255,255,0.2)] text-white placeholder:absolute placeholder:left-3 placeholder:top-3 font-Inter focus:outline-2 focus:outline-[#06b6d4] pl-3" type="password" placeholder="Password" id="input_password" name="password">
+
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="rgba(255,255,255,0.6)" stroke-width="1.5" class="w- h-6 cursor-pointer absolute right-12 top-11">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                    </svg>
+                
+                    </div>
+
+                    <input class="my-8 w-10/12 h-12 rounded-xl bg-[linear-gradient(135deg,_#6366f1_0%,_#06b6d4_100%)] bg-indigo-500 text-white font-bold  transition-all duration-300 hover:bg-gradient-to-r hover:from-indigo-500 hover:to-cyan-400 hover:translate-y-[-2px] hover:shadow-lg cursor-pointer" type="submit" value="Sign In" id="input_submit">
+                    </div>
+                    </form>
+                    
+                    
+                    <div class="mt-1 flex justify-center gap-3">
+                        <hr class="size-27 mt-3 border-[rgba(255,255,255,0.2)]">
+                        <p class="text-[rgba(255,255,255,0.8)] text-sm">or continue with</p>
+                        <hr class="size-27 mt-3 border-[rgba(255,255,255,0.2)]">
+                    </div>
+                
+                    <div class="flex justify-center gap-3 relative bottom-15">
+                        <button class="flex gap-2 justify-center items-center w-40 h-13 relative bottom-3 
+                        bg-[rgba(255,255,255,0.2)] rounded-xl border border-[rgba(255,255,255,0.2)] 
+                        text-[rgba(255,255,255,0.8)] text-sm
+                        transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-lg cursor-pointer">
+                        <img class="w-6 h-6" src="data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3e%3cpath fill='%23ea4335' d='M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z'/%3e%3cpath fill='%2334a853' d='M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z'/%3e%3cpath fill='%23fbbc05' d='M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z'/%3e%3cpath fill='%23ea4335' d='M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z'/%3e%3c/svg%3e" alt="Google Logo" /> Google
+                    </button>
+
+                    <button class="flex gap-2 justify-center items-center w-40 h-13 relative bottom-3 
+                        bg-[rgba(255,255,255,0.2)] rounded-xl border border-[rgba(255,255,255,0.2)] 
+                        text-[rgba(255,255,255,0.8)] text-sm
+                        transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-lg cursor-pointer">
+                        <img class="w-6 h-6" src="data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3e%3cpath d='M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z'/%3e%3c/svg%3e" alt="GitHub Logo" /> GitHub
+                    </button>
+                    </div>
+                <div class="flex gap-1 justify-center relative bottom-12">
+                <p class="text-sm text-[rgba(255,255,255,0.8)]">Don't have an account?</p>
+                <a class="text-sm text-[#06b6d4] hover:text-[rgba(255,255,255,0.8)]" href="index.php">Login</a>
+            </div>
+            </div>
+
+        </div>
+    </main>
+    <script src="script/app.js"></script>
+</body>
+</html>
